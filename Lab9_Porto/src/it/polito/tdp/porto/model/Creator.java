@@ -1,15 +1,22 @@
 package it.polito.tdp.porto.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Creator {
 	
 	private int id_creator;
 	private String family_name;
 	private String given_name;
+	private List<Article> articoli;
+	private List<Creator> coautori;
 	
 	public Creator(int id_creator, String family_name, String given_name) {
 		this.id_creator = id_creator;
 		this.family_name = family_name;
 		this.given_name = given_name;
+		articoli = new ArrayList<Article>();
+		coautori = new ArrayList<Creator>();
 	}
 
 	public int getId_creator() {

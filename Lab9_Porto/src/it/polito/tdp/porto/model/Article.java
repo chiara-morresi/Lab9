@@ -1,15 +1,20 @@
 package it.polito.tdp.porto.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Article {
 	
 	private long eprintid;
 	private int year;
 	private String title;
+	private List<Creator> autori;
 	
 	public Article(long eprintid, int year, String title) {
 		this.eprintid = eprintid;
 		this.year = year;
 		this.title = title;
+		autori = new ArrayList<Creator>();
 	}
 
 	public long getEprintid() {
@@ -62,6 +67,9 @@ public class Article {
 	public String toString() {
 		return title +", " +year;
 	}
+	
+	
+	
 	
 	
 	
